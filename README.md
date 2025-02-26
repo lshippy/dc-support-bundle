@@ -58,13 +58,13 @@ sudo yum install jq zip -y   # CentOS/RHEL
 Simply run the script:
 
 ```bash
-./support_bundle.sh
+bash support_bundle.sh
 ```
 
 or specify a log duration (default is `2h`):
 
 ```bash
-./support_bundle.sh 4h  # Collect logs from the last 4 hours
+bash support_bundle.sh 4h  # Collect logs from the last 4 hours
 ```
 
 ---
@@ -109,7 +109,7 @@ or specify a log duration (default is `2h`):
 ### **3. `Permission denied` errors**
    - Run the script with `sudo`:
      ```bash
-     sudo ./support_bundle.sh
+     sudo bash support_bundle.sh
      ```
 
 ---
