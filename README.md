@@ -41,10 +41,7 @@ support_bundle_<hostname>_<timestamp>.zip
 
 Ensure the following are installed on the system:
 
-- `bash`
 - `jq` (for JSON parsing)
-- `docker`
-- `docker compose`
 - `zip` (for compressing the support bundle)
 
 To install missing dependencies:
@@ -120,12 +117,23 @@ or specify a log duration (default is `2h`):
 ## 📦 Example Output
 
 ```plaintext
+Collecting system information...
+Detecting active Docker Compose projects...
+DEBUG: Found project 'c4r' with config file '/home/ubuntu/c4r/docker-compose.yml'
+Processing Compose project: c4r at /home/ubuntu/c4r
+Redacting sensitive info in .env file for c4r
+Collecting Docker Compose status for c4r
+Collecting logs for c4r
+Logs successfully collected for c4r
 Zipping all collected information...
-Done! Support bundle saved as support_bundle_myserver_2024_02_26.zip
+  adding: support_bundle_concentriq-AIO_2025_02_26/ (stored 0%)
+  adding: support_bundle_concentriq-AIO_2025_02_26/system_report.txt (deflated 61%)
+  adding: support_bundle_concentriq-AIO_2025_02_26/compose_configs/ (stored 0%)
+  adding: support_bundle_concentriq-AIO_2025_02_26/compose_configs/c4r/ (stored 0%)
+  adding: support_bundle_concentriq-AIO_2025_02_26/compose_configs/c4r/c4r.env (deflated 45%)
+  adding: support_bundle_concentriq-AIO_2025_02_26/compose_configs/c4r/docker-compose.yml (deflated 75%)
+  adding: support_bundle_concentriq-AIO_2025_02_26/compose_configs/c4r/c4r_status.txt (deflated 80%)
+  adding: support_bundle_concentriq-AIO_2025_02_26/compose_logs/ (stored 0%)
+  adding: support_bundle_concentriq-AIO_2025_02_26/compose_logs/c4r_logs.txt (deflated 88%)
+Done! Support bundle saved as support_bundle_concentriq-AIO_2025_02_26.zip
 ```
-
----
-
-## 📜 License
-
-This script is provided as-is, without any warranties or guarantees.
