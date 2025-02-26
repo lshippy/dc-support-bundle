@@ -73,7 +73,7 @@ docker compose ls --format json | jq -r '.[] | "\(.Name) \(.ConfigFiles | (if ty
         # Create directories for each project
         mkdir -p "$SUPPORT_BUNDLE/compose_configs/$COMPOSE_PROJECT"
 
-        # Copy docker-compose files
+        # Copy docker compose files
         cp "$COMPOSE_CONFIG_FILE" "$SUPPORT_BUNDLE/compose_configs/$COMPOSE_PROJECT/"
 
         # Copy and redact .env file if it exists
@@ -90,12 +90,6 @@ docker compose ls --format json | jq -r '.[] | "\(.Name) \(.ConfigFiles | (if ty
         echo "Collecting logs for $COMPOSE_PROJECT"
 	(cd "$COMPOSE_DIR" && docker compose --profile "*" logs --since "$LOG_DURATION" --timestamps 2>/dev/null) > "$SUPPORT_BUNDLE/compose_logs/${COMPOSE_PROJECT}_logs.txt"
 
-        # Debugging: Confirm log file creation
-        if [ -s "$SUPPORT_BUNDLE/compose_logs/${COMPOSE_PROJECT}_logs.txt" ]; then
-            echo "Logs successfully collected for $COMPOSE_PROJECT"
-        else
-            echo "WARNING: No logs found for $COMPOSE_PROJECT"
-        fi
     else
         echo "WARNING: Directory '$COMPOSE_DIR' does not exist for project '$COMPOSE_PROJECT'"
     fi
