@@ -60,8 +60,8 @@ fi
 
 # Get Docker Compose projects (handling both string & array cases in ConfigFiles)
 docker compose ls --format json | jq -r '.[] | "\(.Name) \(.ConfigFiles | (if type == "array" then .[0] else . end))"' | while read -r COMPOSE_PROJECT COMPOSE_CONFIG_FILE; do
-    # Debugging: Print project and config file
-    echo "DEBUG: Found project '$COMPOSE_PROJECT' with config file '$COMPOSE_CONFIG_FILE'"
+    # Print project and config file
+    echo "Found project '$COMPOSE_PROJECT' with config file '$COMPOSE_CONFIG_FILE'"
 
     # Extract the working directory from the config file
     COMPOSE_DIR=$(dirname "$COMPOSE_CONFIG_FILE")

@@ -119,7 +119,7 @@ or specify a log duration (default is `2h`):
 ```plaintext
 Collecting system information...
 Detecting active Docker Compose projects...
-DEBUG: Found project 'c4r' with config file '/home/ubuntu/c4r/docker-compose.yml'
+Found project 'c4r' with config file '/home/ubuntu/c4r/docker-compose.yml'
 Processing Compose project: c4r at /home/ubuntu/c4r
 Redacting sensitive info in .env file for c4r
 Collecting Docker Compose status for c4r
