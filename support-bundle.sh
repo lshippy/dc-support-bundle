@@ -98,7 +98,7 @@ done
 # Zip the support bundle
 echo "Zipping all collected information..."
 ZIP_FILENAME="${SUPPORT_BUNDLE}.zip"
-zip -r "$ZIP_FILENAME" "$SUPPORT_BUNDLE"
+zip -qr "$ZIP_FILENAME" "$SUPPORT_BUNDLE"
 
 # Cleanup raw files
 rm -r "$SUPPORT_BUNDLE"
