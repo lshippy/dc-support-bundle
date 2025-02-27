@@ -4,7 +4,7 @@ This script collects **system information**, **Docker Compose project details**,
 
 ---
 
-## 📌 Features
+## Features
 - Collects **system details**:
   - Hostname, OS, IP address, kernel version, uptime.
   - Memory usage, disk usage.
@@ -37,7 +37,7 @@ support_bundle_<hostname>_<timestamp>.zip
 
 ---
 
-## 🛠️ Requirements
+## Requirements
 
 Ensure the following are installed on the system:
 
@@ -53,7 +53,7 @@ sudo yum install jq zip -y   # CentOS/RHEL
 
 ---
 
-## 🚀 Usage
+## Usage
 
 Simply run the script:
 
@@ -69,7 +69,7 @@ bash support_bundle.sh 4h  # Collect logs from the last 4 hours
 
 ---
 
-## 📝 How It Works
+## How It Works
 
 1. **System Information Collection**  
    - Retrieves details such as hostname, OS, IP address, memory usage, disk usage, CPU/memory-consuming processes.
@@ -91,7 +91,7 @@ bash support_bundle.sh 4h  # Collect logs from the last 4 hours
 
 ---
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
 ### **1. Error: `jq: command not found`**
    - Install `jq` using:  
@@ -114,7 +114,7 @@ bash support_bundle.sh 4h  # Collect logs from the last 4 hours
 
 ---
 
-## 📦 Example Output
+## Example Output
 
 ```plaintext
 Collecting system information...
