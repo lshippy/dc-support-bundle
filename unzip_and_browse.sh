@@ -40,7 +40,7 @@ while true; do
 
                 echo "Refresh your FileBrowser window to see the extracted files."
             else
-                echo "⚠️ Extraction failed for \"$zip_file\""
+                echo "Extraction failed for \"$zip_file\""
             fi
         fi
     done <<< "$zip_files"
