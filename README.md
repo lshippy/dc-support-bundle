@@ -132,7 +132,7 @@ Done! Support bundle saved as support_bundle_concentriq-AIO_2025_02_26.zip
 
 ## View a ZIP in FileBrowser
 
-Want to easily extract the ZIP file and view the files in a web-based FileBrowser? Just run:
+Want to easily extract the ZIP file and view the files in a web-based file browser? Just run:
 
 ```sh
 bash unzip_and_browse.sh
