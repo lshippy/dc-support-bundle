@@ -19,7 +19,7 @@ This script collects **system information**, **Docker Compose project details**,
 
 ---
 
-## 📂 Output Structure
+## Output Structure
 
 The script generates a zip file containing:
 
