@@ -9,7 +9,7 @@ docker run --rm -d \
     -e FB_NOAUTH=true \
     filebrowser/filebrowser
 
-echo "⏳ Waiting for FileBrowser to start..."
+echo "Waiting for FileBrowser to start..."
 sleep 5
 
 if ! docker ps --format '{{.Names}}' | grep -q "^filebrowser$"; then
