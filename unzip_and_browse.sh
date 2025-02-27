@@ -30,7 +30,7 @@ while true; do
 
     while IFS= read -r zip_file; do
         if [ -n "$zip_file" ]; then
-            echo "📦 Extracting \"$zip_file\"..."
+            echo "Extracting \"$zip_file\"..."
 
             docker exec filebrowser sh -c "unzip -o \"$zip_file\" -d \"/srv\""
 
